@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --primary: #5851FF;
+    --primary-foreground: #ffffff;
+    --secondary: #1A1A2E;
+    --secondary-foreground: #ffffff;
+    --accent: #7C3AED;
+  }
+  
+  body {
+    @apply font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity;
+  }
+  
+  .case-study {
+    @apply prose prose-lg max-w-none;
+  }
+  
+  .case-study h1 {
+    @apply text-4xl font-bold mb-4 text-secondary;
+  }
+  
+  .case-study h2 {
+    @apply text-3xl font-bold mt-8 mb-4 text-secondary;
+  }
+  
+  .case-study p {
+    @apply mb-4 text-gray-700 leading-relaxed;
+  }
+  
+  .case-study ul {
+    @apply list-disc pl-6 mb-4;
+  }
+  
+  .case-study li {
+    @apply mb-2 text-gray-700;
+  }
+  
+  .score-section {
+    @apply bg-gradient-to-r from-primary to-accent text-white rounded-lg p-8 my-8;
+  }
+  
+  .score-display {
+    @apply flex justify-center my-6;
+  }
+  
+  .score-circle {
+    @apply w-32 h-32 rounded-full bg-white text-primary flex items-center justify-center text-4xl font-bold;
+  }
+  
+  .category-scores {
+    @apply space-y-4 my-6;
+  }
+  
+  .category-score {
+    @apply flex items-center gap-4;
+  }
+  
+  .category-name {
+    @apply w-48 text-sm font-medium text-gray-700;
+  }
+  
+  .score-bar {
+    @apply flex-1 bg-gray-200 rounded-full h-4 overflow-hidden;
+  }
+  
+  .score-fill {
+    @apply bg-primary h-full transition-all duration-500;
+  }
+  
+  .score-value {
+    @apply w-16 text-right text-sm font-semibold text-gray-700;
+  }
+  
+  .cta-button-container {
+    @apply text-center my-8;
+  }
+  
+  .cta-button {
+    @apply inline-block bg-primary text-white px-8 py-4 rounded-lg font-bold text-lg hover:opacity-90 transition-opacity;
+  }
+}
